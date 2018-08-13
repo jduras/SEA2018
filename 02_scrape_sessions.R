@@ -71,7 +71,7 @@ system("phantomjs scrape.js")
 #     str_replace(pattern = 'id=\"session-', "https://www.southerneconomic.org/session-details/?conferenceId=4&eventId=")
 
 # use helper function to get authors and papers in every session
-print(str_c("Scraping webpages for ", nrow(tbl.sea.2018.sessions), " sessions"))
+print(str_c("Scraping webpages for SEA sessions"))
 
 tbl.sea.2018.sessions <-
     read_html("1.html") %>%
@@ -91,3 +91,5 @@ tbl.sea.2018.sessions <-
     select(session.code, session.url, session.name, session.talks)
 
 beep()
+
+save(tbl.sea.2018.sessions, file = "sea_2018_sessions.Rdata")

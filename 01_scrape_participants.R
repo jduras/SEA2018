@@ -20,4 +20,4 @@ tbl.sea.2018.participants <-
            sessions    = `Session(s)`) %>%
     separate(participant, into = c("last.name", "first.name"), sep = ", ")
 
-save(tbl.sea.2018.participants, "sea_2018_participants.Rdata")
+save(tbl.sea.2018.participants, file = "sea_2018_participants.Rdata")

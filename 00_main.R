@@ -8,4 +8,5 @@ library(rvest)
 library(rebus)
 library(beepr)
 
+source("01_scrape_participants.R")
 source("02_scrape_sessions.R")
